@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppIMCSegundoEtec.MainPage">
+
+    <StackLayout BackgroundColor="#999"
+                 Padding="10">
+        
+        <Label Text="CALCULE SEU ÍNDICE DE MASSA CORPORAL"
+               HorizontalTextAlignment="Center"
+               FontSize="Title"
+               FontAttributes="Bold"
+               TextColor="White" />
+
+        <StackLayout Background="#FFF"
+                     Padding="10">
+            
+            <Label Text="Qual é sua altura?"
+                   HorizontalTextAlignment="Center"
+                   TextTransform="Uppercase"
+                   FontAttributes="Bold" />
+            <Entry x:Name="txt_altura" 
+                   Placeholder="Digite sua altura em metros:"
+                   Keyboard="Numeric"
+                   TextColor="red"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+
+            <Label Text="Qual é seu peso?"
+                   TextTransform="Uppercase"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+            <Entry x:Name="txt_peso" 
+                   Placeholder="Digite seu peso em kilos"
+                   Keyboard="Numeric"
+                   HorizontalTextAlignment="Center"
+                   TextColor="red"
+                   FontAttributes="Bold" />
+
+            <Button Text="Calcular"
+                    HorizontalOptions="Center"
+                    Clicked="Button_Clicked"/>
+
+            <Label x:Name="lbl_resultado"
+                   TextColor="red"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center" />
+
+            <Label Text="Valores de Referência"
+                   TextTransform="Uppercase"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Menor que 17 = Muito abaixo do Peso" TextColor="#000" />
+                        <TextCell Text="Entre 17 e 18,49 = Abaixo do Peso" TextColor="#000" />
+                        <TextCell Text="Entre 18,5 e 24,99 = Peso Normal" TextColor="#000" />
+                        <TextCell Text="Entre 25 e 29,99 = Acima do Peso " TextColor="#000" />
+                        <TextCell Text="Entre 30 e 34,99 = Obesidade I" TextColor="#000" />
+                        <TextCell Text="Entre 35 e 39,99 = Obesidade II (Severa" TextColor="#000" />
+                        <TextCell Text="Acima de 40 = Obesidade III (mórbida)" TextColor="#000" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+        </StackLayout>     
+    </StackLayout>
+</ContentPage>
